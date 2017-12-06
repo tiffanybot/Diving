@@ -1,5 +1,5 @@
 ---
-title: "Tritonia_Locations"
+title: "Tritonia Locations"
 author: "Tiff Stephens"
 date: "12/6/2017"
 output: html_document
@@ -24,6 +24,10 @@ or.locs <- read.csv("https://raw.githubusercontent.com/tiffanybot/Diving/master/
 str(or.locs)
 ```
 
+```{r, echo = FALSE}
+or.locs = or.locs[-c(2),] # remove non-Tritonia
+```
+
 
 
 <br>
@@ -32,7 +36,7 @@ str(or.locs)
 
 People have reported seeing Tritonia at two sites, so far: Sunshine Cove and Coughlan Island. A video was even supplied by Mike Navarro! Here are screenshots from one of his dives at Coughlan Island. 
 
-```{r}
+```{r, echo = FALSE}
 img1_path = "images/nudi1.png"
 img2_path = "images/nudi2.png"
 include_graphics(img1_path)
@@ -41,7 +45,7 @@ include_graphics(img2_path)
 
 
 
-```{r}
+```{r, echo = FALSE}
 # new data frame for all cores
 locations_all = or.locs %>%
   distinct(or.locs, latitude_N, longitude_E, site) %>%
