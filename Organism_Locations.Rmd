@@ -29,6 +29,18 @@ str(or.locs)
 <br>
 
 ## Where are Tritonia?
+
+People have reported seeing Tritonia at two sites, so far: Sunshine Cove and Coughlan Island. A video was even supplied by Mike Navarro! Here are screenshots from one of his dives at Coughlan Island. 
+
+```{r}
+img1_path = "images/nudi1.png"
+img2_path = "images/nudi2.png"
+include_graphics(img1_path)
+include_graphics(img2_path)
+```
+
+
+
 ```{r}
 # new data frame for all cores
 locations_all = or.locs %>%
