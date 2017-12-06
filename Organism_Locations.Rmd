@@ -32,12 +32,12 @@ str(or.locs)
 ```{r}
 # new data frame for all cores
 locations_all = or.locs %>%
-  distinct(or.locs, latitude_N, longitude_W, site) %>%
+  distinct(or.locs, latitude_N, longitude_E, site) %>%
   drop_na()
 
 # map "locations_all"
 leaflet(locations_all) %>%
   addTiles() %>%
-  addMarkers(~longitude_W, ~latitude_N, popup = ~site, label = ~site)
+  addMarkers(~longitude_E, ~latitude_N, popup = ~site, label = ~site)
 ```
 
